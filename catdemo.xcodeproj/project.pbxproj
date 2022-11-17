@@ -18,6 +18,9 @@
 		D02D5BB32921CFE600F62480 /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D02D5BB12921CFE600F62480 /* fail.mp3 */; };
 		D02D5BB42921CFE600F62480 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D02D5BB22921CFE600F62480 /* yay.mp3 */; };
 		D02D5BB829230A4C00F62480 /* catCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D5BB729230A4C00F62480 /* catCard.swift */; };
+		D02D5BBA2924BE5700F62480 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D02D5BB92924BE5700F62480 /* GoogleService-Info.plist */; };
+		D02D5BBE2924C1F000F62480 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D02D5BBD2924C1F000F62480 /* FirebaseAnalytics */; };
+		D02D5BC02924C1F000F62480 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D02D5BBF2924C1F000F62480 /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,7 @@
 		D02D5BB12921CFE600F62480 /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
 		D02D5BB22921CFE600F62480 /* yay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yay.mp3; sourceTree = "<group>"; };
 		D02D5BB729230A4C00F62480 /* catCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catCard.swift; sourceTree = "<group>"; };
+		D02D5BB92924BE5700F62480 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02D5BBE2924C1F000F62480 /* FirebaseAnalytics in Frameworks */,
+				D02D5BC02924C1F000F62480 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,7 @@
 				D02D5BB12921CFE600F62480 /* fail.mp3 */,
 				D02D5BA4291F0BB800F62480 /* LaunchScreen.storyboard */,
 				D02D5BA7291F0BB800F62480 /* Info.plist */,
+				D02D5BB92924BE5700F62480 /* GoogleService-Info.plist */,
 			);
 			path = catdemo;
 			sourceTree = "<group>";
@@ -98,6 +105,10 @@
 			dependencies = (
 			);
 			name = catdemo;
+			packageProductDependencies = (
+				D02D5BBD2924C1F000F62480 /* FirebaseAnalytics */,
+				D02D5BBF2924C1F000F62480 /* FirebaseCrashlytics */,
+			);
 			productName = catdemo;
 			productReference = D02D5B96291F0BB400F62480 /* catdemo.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +137,9 @@
 				Base,
 			);
 			mainGroup = D02D5B8D291F0BB400F62480;
+			packageReferences = (
+				D02D5BBC2924C1F000F62480 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D02D5B97291F0BB400F62480 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,6 +159,7 @@
 				D02D5BA6291F0BB800F62480 /* LaunchScreen.storyboard in Resources */,
 				D02D5BA3291F0BB800F62480 /* Assets.xcassets in Resources */,
 				D02D5BA1291F0BB400F62480 /* Main.storyboard in Resources */,
+				D02D5BBA2924BE5700F62480 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +320,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQVH66AQJ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = catdemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.kids-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +336,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.domain17.catdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -333,11 +350,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQVH66AQJ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = catdemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.kids-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -347,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.domain17.catdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -378,6 +397,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D02D5BBC2924C1F000F62480 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D02D5BBD2924C1F000F62480 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D02D5BBC2924C1F000F62480 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D02D5BBF2924C1F000F62480 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D02D5BBC2924C1F000F62480 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D02D5B8E291F0BB400F62480 /* Project object */;
 }

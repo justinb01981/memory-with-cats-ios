@@ -10,26 +10,21 @@ import UIKit
 
 class CatsViewCell: UICollectionViewCell {
     
-    let width = 84.0
-    let height = 84.0
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let rect = CGRect(x: 0, y: 0, width: width, height: height)
-        self.frame = rect
+//        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+//        self.frame = rect
         
-        myImageView = UIImageView(frame: rect)
+        contentView.backgroundColor = UIColor.green
+        myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
 
+        myImageView.image = UIImage(systemName: "ellipses")
         contentView.addSubview(myImageView)
         
         // constraints to indicate cell size to collection view
-        contentView.widthAnchor.constraint(equalToConstant: width).isActive = true
-        contentView.heightAnchor.constraint(equalToConstant: height).isActive = true
-//        contentView.leadingAnchor.constraint(equalTo: myImageView.leadingAnchor).isActive = true
-//        contentView.trailingAnchor.constraint(equalTo: myImageView.trailingAnchor).isActive = true
-//        contentView.topAnchor.constraint(equalTo: myImageView.topAnchor).isActive = true
-//        contentView.bottomAnchor.constraint(equalTo: myImageView.bottomAnchor).isActive = true
+        //contentView.widthAnchor.constraint(equalToConstant: width).isActive = true
+        //contentView.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
     required init?(coder: NSCoder) {

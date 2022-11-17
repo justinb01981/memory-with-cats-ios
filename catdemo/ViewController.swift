@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import FirebaseAnalytics
 
 class ViewController: UICollectionViewController {
     
@@ -16,9 +17,14 @@ class ViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        Analytics.logEvent(AnalyticsEventScreenView, parameters: [:])
+        
         collectionView.register(CatsViewCell.self, forCellWithReuseIdentifier: "collectionViewReuseId")
         
-        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        // adjust collectionView spacing to fit cells into grid
+        collectionView.contentInset = .init(top: 8, left: 8, bottom: 8, right: 8)//layoutMargins = .init(top: 16, left: 8, bottom: view.frame.height - 16, right: view.frame.width - 8)
+        let len = view.frame.width / 5
+        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: len, height: len)
         
         viewModel.prepareGame()
         
@@ -38,8 +44,6 @@ class ViewController: UICollectionViewController {
         let l = UILabel(frame: CGRect(x: 0, y: collectionView.frame.height-256, width: collectionView.frame.width, height: 48))
 
         collectionView.insertSubview(l, at: 0)
-        //collectionView.bottomAnchor.constraint(equalTo: l.bottomAnchor, constant: -128).isActive = true
-        //collectionView.centerXAnchor.constraint(equalTo: l.centerXAnchor).isActive = true
         
         l.textAlignment = .center
         
