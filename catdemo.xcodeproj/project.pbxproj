@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D014B98F2A561DE8000D9A66 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = D014B98E2A561DE8000D9A66 /* View.xib */; };
+		D014B9912A569D62000D9A66 /* GraphicsFlexContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014B9902A569D62000D9A66 /* GraphicsFlexContainer.swift */; };
+		D014B9952A569DDC000D9A66 /* UIView+GraphicsFlexView_m.m in Sources */ = {isa = PBXBuildFile; fileRef = D014B9942A569DDC000D9A66 /* UIView+GraphicsFlexView_m.m */; };
 		D02D5B9A291F0BB400F62480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D5B99291F0BB400F62480 /* AppDelegate.swift */; };
 		D02D5B9C291F0BB400F62480 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D5B9B291F0BB400F62480 /* SceneDelegate.swift */; };
 		D02D5B9E291F0BB400F62480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D5B9D291F0BB400F62480 /* ViewController.swift */; };
@@ -24,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D014B98E2A561DE8000D9A66 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		D014B9902A569D62000D9A66 /* GraphicsFlexContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsFlexContainer.swift; sourceTree = "<group>"; };
+		D014B9922A569DDC000D9A66 /* catdemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "catdemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		D014B9932A569DDC000D9A66 /* UIView+GraphicsFlexView_m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GraphicsFlexView_m.h"; sourceTree = "<group>"; };
+		D014B9942A569DDC000D9A66 /* UIView+GraphicsFlexView_m.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GraphicsFlexView_m.m"; sourceTree = "<group>"; };
 		D02D5B96291F0BB400F62480 /* catdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02D5B99291F0BB400F62480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02D5B9B291F0BB400F62480 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,10 @@
 			isa = PBXGroup;
 			children = (
 				D02D5B99291F0BB400F62480 /* AppDelegate.swift */,
+				D014B98E2A561DE8000D9A66 /* View.xib */,
+				D014B9902A569D62000D9A66 /* GraphicsFlexContainer.swift */,
+				D014B9932A569DDC000D9A66 /* UIView+GraphicsFlexView_m.h */,
+				D014B9942A569DDC000D9A66 /* UIView+GraphicsFlexView_m.m */,
 				D02D5B9B291F0BB400F62480 /* SceneDelegate.swift */,
 				D02D5B9D291F0BB400F62480 /* ViewController.swift */,
 				D02D5BAF291F166100F62480 /* catsViewCell.swift */,
@@ -85,6 +97,7 @@
 				D02D5BA4291F0BB800F62480 /* LaunchScreen.storyboard */,
 				D02D5BA7291F0BB800F62480 /* Info.plist */,
 				D02D5BB92924BE5700F62480 /* GoogleService-Info.plist */,
+				D014B9922A569DDC000D9A66 /* catdemo-Bridging-Header.h */,
 			);
 			path = catdemo;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 				TargetAttributes = {
 					D02D5B95291F0BB400F62480 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -154,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D014B98F2A561DE8000D9A66 /* View.xib in Resources */,
 				D02D5BB42921CFE600F62480 /* yay.mp3 in Resources */,
 				D02D5BB32921CFE600F62480 /* fail.mp3 in Resources */,
 				D02D5BA6291F0BB800F62480 /* LaunchScreen.storyboard in Resources */,
@@ -171,11 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02D5B9E291F0BB400F62480 /* ViewController.swift in Sources */,
+				D014B9952A569DDC000D9A66 /* UIView+GraphicsFlexView_m.m in Sources */,
 				D02D5BAE291F0D9000F62480 /* catsViewModel.swift in Sources */,
 				D02D5BB829230A4C00F62480 /* catCard.swift in Sources */,
 				D02D5B9A291F0BB400F62480 /* AppDelegate.swift in Sources */,
 				D02D5B9C291F0BB400F62480 /* SceneDelegate.swift in Sources */,
 				D02D5BB0291F166100F62480 /* catsViewCell.swift in Sources */,
+				D014B9912A569D62000D9A66 /* GraphicsFlexContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQVH66AQJ9;
@@ -340,9 +358,14 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.domain17.catdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "catdemo/catdemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,6 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQVH66AQJ9;
@@ -371,9 +395,13 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.domain17.catdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "catdemo/catdemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
